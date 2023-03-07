@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  .navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+  }
+
+  .navbar-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .hero {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-field {
+    padding: 0.5rem;
+    border: 2px solid #222;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #444;
+  }
+
+  .step {
+    max-width: 1200px;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feat {
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .feat h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feat p {
+    font-size: 1.2rem;
+  }
+
+  .step h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .step div {
+    margin-left: 4rem;
+    width: 50%;
+  }
+
+  .step ol {
+    font-size: 1.2rem;
+  }
+
+  .step ol li {
+    margin-bottom: 1rem;
+  }
+
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .footer-text {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 200px;
+
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .step {
+    padding: 30px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step div {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+
+    .input-field {
+      width: 90%;
+    }
+    .content{
+        padding: 30px;
+    }
+    button{
+        margin-bottom: 50px;
+    }
+    .navbar-title{
+        text-align: center;
+    }
+  }
+  .input-field.error {
+  border-color: red;
+}
+.text_imp{
+    text-align:center;
+    color:red;
+}

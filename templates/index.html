@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Playlist Downloader</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <h1 class="navbar-title">YtPlaylistDownloader</h1>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1>Youtube Playlist Downloader and Merger</h1>
+      <p>Online tool for downloading or merging Youtube videos.</p>
+    </div>
+    <div class="content">
+      <p class="description">
+        Enter the URL of the YouTube playlist you want to merge and download:
+      </p>
+      <form method="post" action="/download" id="myForm">
+        <input placeholder="Enter link" type="text" name="url" class="input-field" />
+        <button type="submit" class="button" id="submit-btn">Download</button>
+      </form>
+      <p class="description">
+        Or download all videos in the playlist as a zip file:
+      </p>
+      <form method="post" action="/downloadZip">
+        <input placeholder="Enter link" type="text" name="url1" class="input-field zip_dwnld" />
+        <button type="submit" class="button">Download as Zip</button>
+      </form>
+    </div>
+    <h4 class="text_imp">Don't close the app after pressing the Download button!!!</h4>
+    <div class="step">
+      <div>
+        <h3>How to Download Playlist and Merge all the videos Step by Step</h3>
+        <ol>
+          <li>
+            Firstly, navigate to the
+            <a href="https://www.youtube.com/">YouTube</a> website and find the
+            playlist you want to download.
+          </li>
+          <li>
+            Once you've found the playlist, copy its URL from the address bar at
+            the top of your browser.
+          </li>
+          <li>
+            Paste the playlist URL into the input field provided above besides
+            the download button.
+          </li>
+          <li>
+            Click the Download button to begin the process of merging and
+            downloading all the videos in the playlist.
+          </li>
+          <li>
+            Wait for the download to complete. Once finished, you'll have a
+            single video file containing all the videos in the playlist, which
+            will be saved to your system in the highest possible resolution.
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h3>How to Download Playlist videos separately into a zip file.</h3>
+        <ol>
+          <li>
+            Firstly, navigate to the
+            <a href="https://www.youtube.com/">YouTube</a> website and find the
+            playlist you want to download.
+          </li>
+          <li>
+            Once you've found the playlist, copy its URL from the address bar at
+            the top of your browser.
+          </li>
+          <li>
+            Paste the playlist URL into the input field provided above, besides
+            the download as zip button.
+          </li>
+          <li>
+            Click the Download as Zip button to begin the process of downloading
+            all the videos.
+          </li>
+          <li>
+            Wait for the download to complete. Once finished, you'll have a zip
+            file containing all the videos of the playlist that too in highest
+            resolution possible.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <footer class="footer">
+      <p class="footer-text">Copyright &copy; 2023. All rights reserved</p>
+    </footer>
+   <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
