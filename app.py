@@ -5,6 +5,8 @@ import threading
 from flask import Flask, render_template, request, send_file
 import os
 import zipfile
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 app = Flask(__name__)
 
