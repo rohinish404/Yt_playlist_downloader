@@ -2,18 +2,17 @@
 FROM jrottenberg/ffmpeg:4.3-alpine AS ffmpeg
 
 # Stage 2: Install application dependencies
-FROM node:16-alpine
+FROM python:3.9-slim-buster
 
 WORKDIR /app
 
-COPY package.json .
-COPY yarn.lock .
+COPY requirements.txt .
 
-RUN yarn install --production
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
 # Copy FFMPEG binaries from the first stage
 COPY --from=ffmpeg /usr/local /usr/local
 
-CMD ["npm", "start"]
+CMD ["python", "app.py"]
