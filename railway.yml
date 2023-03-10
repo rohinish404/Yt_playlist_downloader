@@ -1,0 +1,7 @@
+# railway.yml
+version: 1
+services:
+  web:
+    dockerfile: Dockerfile
+    env:
+      PORT: 8080
